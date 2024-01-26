@@ -10,7 +10,7 @@ class Config:
         
         self.device = 'cpu'
         self.device = 'cuda'
-        # self.device = 'tpu'
+        self.device = 'tpu'
         
         self.tpu_cores = 'single'
         self.tpu_cores = 'multi'
@@ -28,7 +28,7 @@ class Config:
             
             self.home_dir = os.path.expanduser('~')
             
-            self.storage_local_or_bucket = 'bucket'    
+            self.storage_local_or_bucket = 'local'    
             
             self.bucket_name = 'bucket-us-central1-relativeposeestimation'
             self.bucket_name = 'bucket-europe-west4-relativeposeestimation'
@@ -39,29 +39,15 @@ class Config:
         else:
             self.storage_local_or_bucket = 'local'
         
-        self.first_experiment = 100
-        
-        # self.model_type = 'CNN_Plain'
-        # self.model_type = 'CNN_Residual'
-        # self.model_type = 'CNN_Residual_Context'        
-        # self.model_type = 'MobileNetV1'
-        # self.model_type = 'MobileNetV2'
-        # self.model_type = 'MobileNetV3'
-        
-        # self.model_type = 'model_exp'
-        # self.model_exp_no = 0
-        
         self.model_type = 'model_exp2'
-        self.model_exp_no = 0
+
+        self.first_experiment = 100        
+        self.model_exp_no = 2
+
+        # self.first_experiment = 101        
+        # self.model_exp_no = 12
         
-        # self.model_type = 'LTFGC'
-        # self.model_type = 'OANET'
-        # self.model_type = 'OANET_Iter'
-        
-        if( self.model_type == 'LTFGC' or self.model_type == 'OANET' or self.model_type == 'OANET_Iter'):
-            self.input_type = 'n_to_n'
-        else:
-            self.input_type = '1_to_1'
+        self.input_type = '1_to_1'           
         
         self.use_ratio = 0  # 0-> don't use, 1-> mask xs and ys, 2-> use as side
         self.use_mutual = 0  # 0-> don't use, 1-> mask xs and ys, 2-> use as side
