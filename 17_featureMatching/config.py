@@ -63,9 +63,9 @@ class Config:
         
         if( self.input_type == '1_to_1'):
             # self.training_params = [ [ 1, 512, 64, ],  ]        
-            self.training_params = [ [ 1, 512, 512, ],  ]
+            # self.training_params = [ [ 1, 512, 512, ],  ]
             # self.training_params = [ [ 1, 1024, 1024, ],  ]
-            # self.training_params = [ [ 1, 2048, 2048, ],  ]
+            self.training_params = [ [ 1, 2048, 2048, ],  ]
             
             # self.n_epochs = [500, 500, 0] # always cls loss
             self.n_epochs = [500, 0, 1] # only first chunk cls loss
