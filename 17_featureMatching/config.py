@@ -99,7 +99,7 @@ class Config:
         self.file_name_test = 'yfcc-sift-2000-test.hdf5'
         
         if( self.device == 'tpu' ):
-            os.chdir( os.path.join(self.home_dir, '17_featureMatching') )
+            os.chdir( os.path.join(self.home_dir, 'TPU_mem_util_debug', '17_featureMatching') )
         
         self.input_path_bucket = '01_featureMatchingDatasets' 
         self.input_path_local = os.path.join('..', self.input_path_bucket)                
