@@ -12,8 +12,25 @@ class Config:
         self.device = 'cuda'
         self.device = 'tpu'
         
-        self.tpu_cores = 'single'
+        ### small model, single-core
+        # self.tpu_cores = 'single'
+        # self.first_experiment = 100        
+        # self.model_exp_no = 2  
+        
+        ### big model, single-core
+        # self.tpu_cores = 'single'
+        # self.first_experiment = 101        
+        # self.model_exp_no = 12
+        
+        ### small model, multi-core
         self.tpu_cores = 'multi'
+        self.first_experiment = 102        
+        self.model_exp_no = 2
+        
+        ### big model, multi-core
+        # self.tpu_cores = 'multi'
+        # self.first_experiment = 103        
+        # self.model_exp_no = 12
         
         self.validation = 'disable'
         self.validation = 'enable'
@@ -40,12 +57,6 @@ class Config:
             self.storage_local_or_bucket = 'local'
         
         self.model_type = 'model_exp2'
-
-        self.first_experiment = 100        
-        self.model_exp_no = 2
-
-        # self.first_experiment = 101        
-        # self.model_exp_no = 12
         
         self.input_type = '1_to_1'           
         
